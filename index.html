@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Top 20 Videojuegos Más Recaudadores</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080b12;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #151033, #080b12);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #604cff;
+            border-radius: 30px;
+            color: #b9aeff;
+            background: #15122d;
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 55px;
+            margin: 20px 0 15px;
+        }
+
+        h1 span {
+            color: #806cff;
+        }
+
+        header p {
+            max-width: 750px;
+            margin: auto;
+            color: #9ba7b8;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .estadisticas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .estadistica {
+            background: #111722;
+            border: 1px solid #273143;
+            border-radius: 15px;
+            padding: 22px;
+            text-align: center;
+        }
+
+        .estadistica h2 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .estadistica p {
+            color: #9ba7b8;
+            font-size: 13px;
+        }
+
+        .controles {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        input,
+        select {
+            background: #111722;
+            color: white;
+            border: 1px solid #273143;
+            border-radius: 10px;
+            padding: 14px;
+            font-size: 15px;
+        }
+
+        input {
+            flex: 1;
+        }
+
+        select {
+            width: 200px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #806cff;
+        }
+
+        .juegos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            padding-bottom: 50px;
+        }
+
+        .juego {
+            display: grid;
+            grid-template-columns: 55px 1fr auto;
+            align-items: center;
+            gap: 15px;
+
+            background: linear-gradient(
+                145deg,
+                #171e2b,
+                #0c1018
+            );
+
+            border: 1px solid #273143;
+            border-radius: 17px;
+            padding: 20px;
+
+            transition: 0.2s;
+        }
+
+        .juego:hover {
+            transform: translateY(-4px);
+            border-color: #6557d8;
+        }
+
+        .numero {
+            font-size: 27px;
+            font-weight: bold;
+            color: #657086;
+            text-align: center;
+        }
+
+        .informacion h2 {
+            font-size: 19px;
+            margin-bottom: 7px;
+        }
+
+        .informacion p {
+            color: #9ba7b8;
+            font-size: 13px;
+        }
+
+        .etiqueta {
+            display: inline-block;
+            background: #20293a;
+            color: #c4ccda;
+            padding: 5px 8px;
+            border-radius: 6px;
+            margin-top: 9px;
+            margin-right: 4px;
+            font-size: 11px;
+        }
+
+        .dinero {
+            text-align: right;
+        }
+
+        .dinero strong {
+            display: block;
+            color: #72e5c6;
+            font-size: 19px;
+        }
+
+        .dinero small {
+            color: #7f8a9d;
+        }
+
+        .sin-resultados {
+            display: none;
+            text-align: center;
+            color: #9ba7b8;
+            padding: 40px;
+        }
+
+        footer {
+            border-top: 1px solid #273143;
+            padding: 30px 0;
+            color: #7f8a9d;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 750px) {
+
+            h1 {
+                font-size: 38px;
+            }
+
+            .estadisticas {
+                grid-template-columns: 1fr;
+            }
+
+            .juegos {
+                grid-template-columns: 1fr;
+            }
+
+            .controles {
+                flex-direction: column;
+            }
+
+            select {
+                width: 100%;
+            }
+
+            .juego {
+                grid-template-columns: 45px 1fr;
+            }
+
+            .dinero {
+                grid-column: 2;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="container">
+
+        <span class="badge">
+            🎮 VIDEOJUEGOS • RÉCORDS HISTÓRICOS
+        </span>
+
+        <h1>
+            Los <span>20 juegos</span> que más dinero han recaudado
+        </h1>
+
+        <p>
+            Conoce algunos de los videojuegos que han generado
+            mayores ingresos a lo largo de la historia mediante
+            ventas, microtransacciones, suscripciones y otros
+            modelos de negocio.
+        </p>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <section class="estadisticas">
+
+        <div class="estadistica">
+            <h2>$22 B+</h2>
+            <p>Mayor cifra estimada de esta lista</p>
+        </div>
+
+        <div class="estadistica">
+            <h2>20</h2>
+            <p>Videojuegos destacados</p>
+        </div>
+
+        <div class="estadistica">
+            <h2>1978 - 2026</h2>
+            <p>Periodo representado</p>
+        </div>
+
+    </section>
+
+
+    <div class="controles">
+
+        <input
+            type="text"
+            id="buscador"
+            placeholder="🔎 Buscar videojuego..."
+        >
+
+        <select id="orden">
+
+            <option value="original">
+                Orden original
+            </option>
+
+            <option value="dinero">
+                Mayor recaudación
+            </option>
+
+            <option value="reciente">
+                Más reciente
+            </option>
+
+            <option value="antiguo">
+                Más antiguo
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <section id="listaJuegos" class="juegos"></section>
+
+    <div id="sinResultados" class="sin-resultados">
+        No se encontraron videojuegos.
+    </div>
+
+
+    <footer>
+
+        <strong>Nota:</strong>
+
+        Las cifras son estimaciones aproximadas.
+        Los videojuegos no utilizan todos el mismo modelo
+        de ingresos, por lo que algunas cifras pueden incluir
+        ventas, microtransacciones, suscripciones u otros ingresos.
+
+        <br><br>
+
+        Esta página tiene fines informativos y las cifras pueden
+        variar dependiendo de la fuente y de la fecha de actualización.
+
+    </footer>
+
+</main>
+
+
+<script>
+
+const juegos = [
+
+    {
+        nombre: "Dungeon Fighter Online",
+        dinero: 22.0,
+        año: 2005,
+        empresa: "Nexon / Neople",
+        etiquetas: ["PC", "Free-to-play"]
+    },
+
+    {
+        nombre: "Fortnite",
+        dinero: 20.0,
+        año: 2017,
+        empresa: "Epic Games",
+        etiquetas: ["PC", "Consolas", "Battle Royale"]
+    },
+
+    {
+        nombre: "Honor of Kings",
+        dinero: 18.66,
+        año: 2015,
+        empresa: "Tencent",
+        etiquetas: ["Móvil", "MOBA"]
+    },
+
+    {
+        nombre: "PUBG: BATTLEGROUNDS",
+        dinero: 17.83,
+        año: 2017,
+        empresa: "Krafton",
+        etiquetas: ["PC", "Consolas", "Battle Royale"]
+    },
+
+    {
+        nombre: "League of Legends",
+        dinero: 15.25,
+        año: 2009,
+        empresa: "Riot Games / Tencent",
+        etiquetas: ["PC", "MOBA"]
+    },
+
+    {
+        nombre: "Space Invaders",
+        dinero: 13.93,
+        año: 1978,
+        empresa: "Taito",
+        etiquetas: ["Arcade", "Clásico"]
+    },
+
+    {
+        nombre: "CrossFire",
+        dinero: 13.09,
+        año: 2007,
+        empresa: "Smilegate / Tencent",
+        etiquetas: ["PC", "FPS"]
+    },
+
+    {
+        nombre: "Pac-Man",
+        dinero: 13.56,
+        año: 1980,
+        empresa: "Bandai Namco",
+        etiquetas: ["Arcade", "Clásico"]
+    },
+
+    {
+        nombre: "Street Fighter II",
+        dinero: 10.86,
+        año: 1991,
+        empresa: "Capcom",
+        etiquetas: ["Arcade", "Lucha"]
+    },
+
+    {
+        nombre: "Lineage",
+        dinero: 9.25,
+        año: 1998,
+        empresa: "NCSoft",
+        etiquetas: ["PC", "MMORPG"]
+    },
+
+    {
+        nombre: "PUBG Mobile",
+        dinero: 9.01,
+        año: 2018,
+        empresa: "Krafton / Tencent",
+        etiquetas: ["Móvil", "Battle Royale"]
+    },
+
+    {
+        nombre: "World of Warcraft",
+        dinero: 9.00,
+        año: 2004,
+        empresa: "Blizzard",
+        etiquetas: ["PC", "MMORPG"]
+    },
+
+    {
+        nombre: "Candy Crush Saga",
+        dinero: 7.69,
+        año: 2012,
+        empresa: "King",
+        etiquetas: ["Móvil", "Puzzle"]
+    },
+
+    {
+        nombre: "Arena of Valor",
+        dinero: 6.30,
+        año: 2016,
+        empresa: "Tencent",
+        etiquetas: ["Móvil", "MOBA"]
+    },
+
+    {
+        nombre: "Pokémon GO",
+        dinero: 5.99,
+        año: 2016,
+        empresa: "Niantic / Pokémon",
+        etiquetas: ["Móvil", "Realidad aumentada"]
+    },
+
+    {
+        nombre: "Roblox",
+        dinero: 5.88,
+        año: 2006,
+        empresa: "Roblox Corporation",
+        etiquetas: ["PC", "Móvil", "Plataforma"]
+    },
+
+    {
+        nombre: "Clash of Clans",
+        dinero: 5.86,
+        año: 2012,
+        empresa: "Supercell",
+        etiquetas: ["Móvil", "Estrategia"]
+    },
+
+    {
+        nombre: "Wii Sports",
+        dinero: 5.20,
+        año: 2006,
+        empresa: "Nintendo",
+        etiquetas: ["Wii", "Deportes"]
+    },
+
+    {
+        nombre: "Coin Master",
+        dinero: 4.90,
+        año: 2010,
+        empresa: "Moon Active",
+        etiquetas: ["Móvil", "Casual"]
+    },
+
+    {
+        nombre: "Fate/Grand Order",
+        dinero: 4.81,
+        año: 2015,
+        empresa: "Lasengle / Aniplex",
+        etiquetas: ["Móvil", "RPG"]
+    }
+
+];
+
+
+function convertirDinero(numero) {
+
+    return "$" +
+        numero.toFixed(2) +
+        " mil millones";
+
+}
+
+
+function mostrarJuegos() {
+
+    const buscador =
+        document.getElementById("buscador")
+        .value
+        .toLowerCase();
+
+    const orden =
+        document.getElementById("orden")
+        .value;
+
+
+    let lista = juegos.filter(function(juego) {
+
+        return (
+            juego.nombre.toLowerCase().includes(buscador) ||
+            juego.empresa.toLowerCase().includes(buscador) ||
+            juego.etiquetas.join(" ").toLowerCase().includes(buscador)
+        );
+
+    });
+
+
+    if (orden === "dinero") {
+
+        lista.sort(function(a, b) {
+            return b.dinero - a.dinero;
+        });
+
+    }
+
+
+    if (orden === "reciente") {
+
+        lista.sort(function(a, b) {
+            return b.año - a.año;
+        });
+
+    }
+
+
+    if (orden === "antiguo") {
+
+        lista.sort(function(a, b) {
+            return a.año - b.año;
+        });
+
+    }
+
+
+    const contenedor =
+        document.getElementById("listaJuegos");
+
+    contenedor.innerHTML = "";
+
+
+    lista.forEach(function(juego) {
+
+        let posicion =
+            juegos.indexOf(juego) + 1;
+
+
+        if (orden !== "original") {
+
+            posicion =
+                lista.indexOf(juego) + 1;
+
+        }
+
+
+        let etiquetas = "";
+
+
+        juego.etiquetas.forEach(function(etiqueta) {
+
+            etiquetas +=
+                `<span class="etiqueta">${etiqueta}</span>`;
+
+        });
+
+
+        contenedor.innerHTML += `
+
+            <article class="juego">
+
+                <div class="numero">
+                    #${posicion}
+                </div>
+
+                <div class="informacion">
+
+                    <h2>
+                        ${juego.nombre}
+                    </h2>
+
+                    <p>
+                        ${juego.empresa}
+                        •
+                        ${juego.año}
+                    </p>
+
+                    ${etiquetas}
+
+                </div>
+
+                <div class="dinero">
+
+                    <strong>
+                        ${convertirDinero(juego.dinero)}
+                    </strong>
+
+                    <small>
+                        estimado
+                    </small>
+
+                </div>
+
+            </article>
+
+        `;
+
+    });
+
+
+    const mensaje =
+        document.getElementById("sinResultados");
+
+
+    if (lista.length === 0) {
+
+        mensaje.style.display = "block";
+
+    } else {
+
+        mensaje.style.display = "none";
+
+    }
+
+}
+
+
+document
+    .getElementById("buscador")
+    .addEventListener("input", mostrarJuegos);
+
+
+document
+    .getElementById("orden")
+    .addEventListener("change", mostrarJuegos);
+
+
+mostrarJuegos();
+
+</script>
+
+</body>
+</html>
